@@ -3,7 +3,7 @@ public class Car {
     public Integer maximumSpeed;
     public Integer passengers;
     public String color;
-    public Boolean motorIsOn; 
+    public Boolean motorIsOn = true; 
     public Date currentDate; 
     public Radio carRadio;
     
@@ -49,6 +49,15 @@ public class Car {
                     ', can carry '+ this.passengers +' passengers, and is painted '+ this.color;
     } 
      
+    public Car(Boolean newMotorIsOn) {
+        this.motorIsOn = newMotorIsOn;
+    } 
     
     
+    public void toggleMotor (Boolean revertedMotorIsOn) {
+        this.motorIsOn = ! this.motorIsOn;
+        this.MotorIsOn =  revertedMotorIsOn;
+    }
+
+
 }
