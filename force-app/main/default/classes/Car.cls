@@ -3,9 +3,21 @@ public class Car {
     public Integer maximumSpeed;
     public Integer passengers;
     public String color;
-    public Boolean motorIsOn = true; 
+    public Boolean motorIsOn; 
     public Date currentDate; 
     public Radio carRadio;
+
+    public Car() {
+        this.motorIsOn = true;
+    } 
+    
+    public Car (String motor, Integer maximumSpeed, Integer passengers, String color){
+        this.motor = motor;
+        this.maximumSpeed = maximumSpeed;
+        this.passengers = passengers;
+        this.color = color;
+        this.motorIsOn = true;
+    }
     
     public void printCarVlues(){
         String p1 = 'Motor is: ' + motor + '. ';
@@ -29,13 +41,6 @@ public class Car {
         this.color = newPaint;
     } 
 
-    public Car (String motor, Integer maximumSpeed, Integer passengers, String color){
-        this.motor = motor;
-        this.maximumSpeed = maximumSpeed;
-        this.passengers = passengers;
-        this.color = color;
-    }
-
     public void increasePassengers(Integer numberOfPassengers){
         this.passengers = this.passengers + numberOfPassengers;
     }  
@@ -49,15 +54,8 @@ public class Car {
                     ', can carry '+ this.passengers +' passengers, and is painted '+ this.color;
     } 
      
-    public Car(Boolean newMotorIsOn) {
-        this.motorIsOn = newMotorIsOn;
-    } 
-    
-    
-    public void toggleMotor (Boolean revertedMotorIsOn) {
-        this.motorIsOn = ! this.motorIsOn;
-        this.MotorIsOn =  revertedMotorIsOn;
+    public void toggleMotor() {
+        this.motorIsOn = !this.motorIsOn;  
     }
-
 
 }
