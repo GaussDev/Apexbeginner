@@ -39,11 +39,60 @@ public with sharing class OpportunityService {
         return thirdOpp;
 
     }
-    //all we write in debug mode we can put in the method, so we do not do it manually
+    //all we write in debug mode we can put in the method, so we do not do it manuall
 
+    public void updateOpportunityCloseDates(String stageName, Integer daysToAdd){
+        List<Opportunity> opportunities = [
+            SELECT Id, StageName, CloseDate
+            FROM Opportunity
+            WHERE StageName = :stageName
+        ];
 
+        for(Opportunity opportunity :opportunities){
+            opportunity.CloseDate = opportunity.CloseDate.addDays(daysToAdd);
+
+        }  
+
+     update opportunities;
+    }
+
+    public void closeOldOpportunities(Integer amountOfMonths){
+        Date newCloseDate = Date.today().addMonths(-amountOfMonths);
+
+        List<Opportunity> opportunities = [
+            SELECT Id, CloseDate, StageName
+            FROM Opportunity
+            WHERE CloseDate < :newCLoseDate AND StageName = 'Needs Analysis'
+        ];
+
+        
+        for(Opportunity opportunity :opportunities){
+            opportunity.StageName = 'Closed Lost';
+    
+        }
+
+        update opportunities;
 
     }
+
+    public void addTimeToOpportunities(Set<Id> accountIds, Integer amountOfDays){
+
+        List<Opportunity> opportunities = [
+            SELECT Id, CloseDate
+            FROM Opportunity
+            WHERE Opportunity.AccountId IN :accountIds
+        ];
+
+        
+        for(Opportunity opportunity :opportunities){
+            opportunity.CloseDate = Opportunity.CloseDate.addDays(amountOfDays);
+    
+        }
+
+        update opportunities;
+
+    }
+}
 
 
     

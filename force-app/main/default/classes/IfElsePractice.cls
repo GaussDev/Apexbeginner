@@ -33,13 +33,13 @@ public with sharing class IfElsePractice {
     }
 
     public Decimal convertTemperature(Decimal temperature, String unit){
-        if(unit == 'F'){
-            return ((temperature * 9 / 5) + 32 );
-        } else if(unit == 'C'){
-            return ((temperature -32) * 5 / 9);
-        } else {
-            return 0;
-        }
+        if(unit == 'C'){
+            return ((temperature * 9.0 / 5.0) + 32.0 );
+        } else if(unit == 'F'){
+            return ((temperature - 32.0) * 5.0 / 9.0);
+        } 
+
+        return 0;
     }
 
     
