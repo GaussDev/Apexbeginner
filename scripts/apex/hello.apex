@@ -18,3 +18,7 @@ anyList.add(2);
 anyList.add(3);
 Integer newMembers = newElement.sumList(anyList);
 System.debug(newMembers);
+
+Loops newElement = new Loops();
+newElement.createNIntegers(10);
+System.debug(newElement);

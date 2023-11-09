@@ -80,7 +80,7 @@ public with sharing class OpportunityService {
         List<Opportunity> opportunities = [
             SELECT Id, CloseDate
             FROM Opportunity
-            WHERE Opportunity.AccountId IN :accountIds
+            WHERE AccountId IN :accountIds
         ];
 
         

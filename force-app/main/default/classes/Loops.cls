@@ -57,7 +57,17 @@ public with sharing class Loops {
         return ints.get(0);
     }
 
-    
+    public Integer getSmallest(List<Integers> ints) {
+        Integer smallest = ints.sort(0);
+
+        for(Integer element : ints) {
+        for(Integer element : ints) {
+            if(element < smallest  )
+            
+        }  
+
+        return ints.get(0);
+    }
 
 
    }
