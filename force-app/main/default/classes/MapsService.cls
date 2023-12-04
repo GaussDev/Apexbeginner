@@ -69,6 +69,10 @@ public with sharing class MapsService {
     public List<String> getValuesByKey(Map<String, String> inputMap, List<String> keys){
         List<String> listToReturn = new List<String>();
 
+        //String key ide kroz keys listu, u prvoj iteraciji key = prvi element iy keys liste
+        //potom pita da li mapa inputMap sadrzi key varijablu tj da li sadrzi prvi element
+        //ako sadrzi, doda ga  listu
+        
         for(String key : keys){
             if(inputMap.containsKey(key)){ 
                 String value = inputMap.get(key);

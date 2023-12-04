@@ -54,6 +54,57 @@ public class AccountService {
         return accountTier;
     }
 
+        
+    public Map<String, List<Account>> createIndustryMap(List<Account> accs){
+        Map<String, List<Account>> mapWithAccounts = new Map<String, List<Account>>();
+
+        for(Account account : accs){
+            if(account.Industry = mapWithAccounts.containsKey(accs.Industry)){ 
+                mapWithAccounts.put(String a, List<Account>(account));
+            } 
+
+
+
+
+            //if the industry is in the list, save it
+            //if it is not in the list, save in another list
+
+        //String key ide kroz keys listu, u prvoj iteraciji key = prvi element iz keys liste
+        //potom pita da li mapa inputMap sadrzi key varijablu tj da li sadrzi prvi element
+        //ako sadrzi, doda ga  listu
+        
+        //for(String key : keys){
+         //   if(inputMap.containsKey(key)){ 
+           //     String value = inputMap.get(key);
+
+             //   listToReturn.add(value);
+            //}
+        //}
+
+            if(String industry = accs.get(industry)){
+                mapWithAccounts.put(account, accs)
+
+            }else{
+
+
+            }     
+
+        }
+        return mapWithAccounts;
+
+//for(String key : keys){
+//    if(inputMap.containsKey(key)){ 
+//      String value = inputMap.get(key);
+
+  //      listToReturn.add(value);
+ //   }
+}
+
+return listToReturn;
+
+
+    }
+
 
 
 
