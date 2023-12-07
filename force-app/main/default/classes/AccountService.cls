@@ -39,6 +39,8 @@ public class AccountService {
         return account.Name != null && account.Name.toLowerCase().contains('test');
     }
 
+    //New comment: could we use this instead of to.lowerCase().contains() --->return account.Name.contains('test');
+
     public String printAccountTier(Account account){
         String accountTier = 'VIP Tier';
 

@@ -22,3 +22,8 @@ System.debug(newMembers);
 Loops newElement = new Loops();
 newElement.createNIntegers(10);
 System.debug(newElement);
+
+
+AccountService service = new AccountService();
+service.getAccountSummary(Dickenson plc);
+System.debug(summary);

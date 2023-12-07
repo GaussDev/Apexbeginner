@@ -41,6 +41,28 @@ public with sharing class IfElsePractice {
 
         return 0;
     }
+//new part of the homework to check with Igor:
 
+    public Boolean isEven(Integer myNumber){
+        return (Math.mod(myNumber, 2) == 1);  
+    } 
+
+    public String isDivisibleBy3or5(Integer numberToCheck){
+        String result = 'not divisible';
+
+        if(Math.mod(numberToCheck,3) == 0){
+            result = 'divisible with 3';
+        }else if(Math.mod(numberToCheck,5) == 0){
+            result = 'divisible with 5';
+        }else if((Math.mod(numberToCheck,5) == 0) && (Math.mod(numberToCheck,3) == 0)){
+            result = 'divisible by both';
+        }
+    return result;
+
+    }    
+
+    public Boolean isLeapYear(Integer year){
+        return ((Math.mod(year,4) == 0 || Math.mod(year,400) == 0) && Math.mod(year,100) != 0);
+    }
     
 }
