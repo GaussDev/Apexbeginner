@@ -53,27 +53,35 @@ public with sharing class NewOpportunityService {
 
     public void doubleAmount(Opportunity opportunity){
         opportunity.Amount *= 2;
-    }
+    }  
 
     //new Comment: to create opportunity all these input variables are important
     public Opportunity createNewOpportunity(String name, String stageName, Date closeDate, Decimal amount, Id accountId){
         Opportunity opportunity = new Opportunity();
 
-        if(name != null && stageName != null && closeDate != null && amount != null && accountId != null){
+        if(name == null){
+            name = 'Test Account';
+        }
+        if(stageName == null){
+            stageName = 'Prospecting';
+        }
+        if(closeDate == null){
+            closeDate = Date.today().addDays(30);
+        } 
+        if(amount == null){
+            amount = 10000.00;
+        } 
+        
             opportunity.Name = name;
             opportunity.StageName = stageName;
             opportunity.CloseDate = closeDate;
             opportunity.Amount = amount;
             opportunity.AccountId = accountId;
-        
-        }else{
-            opportunity.Name = 'Default Name';
-            opportunity.StageName = 'Prospecting';
-            opportunity.CloseDate = Date.today().addDays(30);
-            opportunity.Amount = 10000.00;
-            opportunity.AccountId = '0067R0000207jvZQAQ';
-        }
-
+         
     return opportunity;
     }
+    
 }
+
+
+
