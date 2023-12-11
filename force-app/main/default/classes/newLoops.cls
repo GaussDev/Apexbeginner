@@ -53,7 +53,50 @@ public with sharing class newLoops {
         factor = (decimal)(sumA / sumB); //or I need to use here Decimal.valueOf(sumA/SumB) method?
         return factor;
     }
+    
+    public void printQuadrats(Integer x){
 
+        for(Integer i=1; i <= x; i++){
+            System.debug(i * i);
+        }
+    }
 
+    public void printMultiplicationTable(Integer myNumber){
+        for(Integer i=1; i <= myNumber; i++){
+            System.debug(i * myNumber);
+        }
+    }
+    
+    public void printPositiveEvenNumbers(Integer n){
+        if(n > 0 && Math.mod(n, 2) == 0){
+            for(Integer i=n; i >= 0; i--){
+                System.debug(i);
+            }
+        }
+    }
 
+//what is the difference if we first have condition than loop VS first loop and inside of it a condition?
+//what is the best practice?
+
+    public void printNegativeOddNumbers(Integer n){
+        if(n < 0 && Math.mod(n, 2) != 0){
+            for(Integer i=n; i < 0; i++){
+                System.debug(i);
+            }
+        }
+    }
+
+    public void calculateRange(Integer numberA, Integer numberB){
+        Integer minNumber = Math.min(numberA, numberB);
+        Integer maxNumber = Math.max(numberA, numberB);
+        Integer sum = 0;
+
+        if((minNumber == null || maxNumber == null) && (minNumber == maxNumber)){
+            System.debug('Result is 0');
+        }else{
+            for(Integer i = minNumber; i <= maxNumber; i++){
+                sum += i;
+            }
+        }
+    }
 }
