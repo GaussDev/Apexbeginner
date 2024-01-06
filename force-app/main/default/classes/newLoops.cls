@@ -99,4 +99,38 @@ public with sharing class newLoops {
             }
         }
     }
+
+    public Boolean isPrime(Integer myNumber) {
+
+// I = 2, Mod(5, 2) = false - > not prime
+// i = 3, Mod(5, 3) = false
+// i = 4, Mod(5, 4) = false
+
+// i = 2, Mod(6, 2) = true - not prime
+// 
+
+
+        for(Integer i=2; i <= myNumber; i++){
+            if(Math.mod(myNumber, i) == 0) {
+                return false;
+            }
+            System.debug(i);
+        }
+        return true;
+    }
+
+    public Boolean isPrime_secondVersion(Integer n) {
+        Integer primeFactor = 0;
+
+        for(Integer i = 3; i <= n; i++){
+            if(Math.mod(n, i) == 0){
+                primeFactor++;
+                if(primeFactor == 1){
+                    System.debug(i);
+                }
+            }
+        }  
+        return true;
+    }
+
 }

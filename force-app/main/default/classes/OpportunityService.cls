@@ -1,4 +1,6 @@
-public with sharing class OpportunityService {
+public with sharing class OpportunityService extends SObjectService{
+    
+    
 
     public Opportunity createOpportunity(){
 
@@ -93,9 +95,3 @@ public with sharing class OpportunityService {
 
     }
 }
-
-
-    
-
-
-

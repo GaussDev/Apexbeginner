@@ -42,34 +42,5 @@ public with sharing class Loops {
        
        return sum;
    }
-//i get the list, I need to iterate through the list and get the smallest integer
-   
-    public Integer createNIntegers(Integer n) {
 
-        Integer<List> ints = new Integer<List>();
-        ints.add(n);
-        return ints;
-    }
-
-    public Integer getSmallest(List<Integers> ints) {
-        ints.sort();
-
-        return ints.get(0);
-    }
-
-    public Integer getSmallest(List<Integers> ints) {
-        Integer smallest = ints.sort(0);
-
-        for(Integer element : ints) {
-        for(Integer element : ints) {
-            if(element < smallest  )
-            
-        }  
-
-        return ints.get(0);
-    }
-
-
-   }
-
-
+}

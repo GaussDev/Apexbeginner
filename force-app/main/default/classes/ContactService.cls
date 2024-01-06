@@ -1,4 +1,4 @@
-public with sharing class ContactService {
+public with sharing class ContactService extends SObjectService{
 
     
     public Contact createContact(Id accountid, String title, String department, String firstName, String lastName){
@@ -43,9 +43,6 @@ public with sharing class ContactService {
         update contacts;
 
     }   
-
-
-    
 
 
 
