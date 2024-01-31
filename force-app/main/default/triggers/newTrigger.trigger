@@ -16,7 +16,4 @@ trigger newTrigger on Opportunity (after update) {
 
         insert tasks;
     }
-
-
-
 }
