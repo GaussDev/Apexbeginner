@@ -39,7 +39,31 @@ public class AccountService extends SObjectService{
         return account.Name != null && account.Name.toLowerCase().contains('test');
     }
 
-    
+    //example List (Acc1, Acc2, Acc3). String is Industry like Banking, Tourism, IT. Every Account has industry
+    // loop through list of Acc with new variable and store Industry and store the Account
+
+
+    public Map<String, List<Account>> createIndustryMap(List<Account> accs) {
+
+        Map<String, List<Account>> newAccMap = new Map<String, List<Account>>();
+
+        for(Account acc : accs){
+            //da li se prvi account iz liste accs nalazi u mapi - ako NE, spasi ga i mapiraj sa acc.Industry
+            //ako DA, provjeri da li je vec u mapi, ako nije dodaj ga na listu
+
+            if(newAccMap.containsKey(acc.Industry)){
+                newAccMap.put(acc.Industry, newAccMap.get(acc.Industry));
+            }else{
+                String newIndustry = acc.Industry;
+                List<Account> newAccount = new List<Account>();
+                newAccount.add(acc);
+                newAccMap.put(newIndustry, newAccount);
+            }
+        }
+
+
+        return newAccMap;
+    }
 
 
 

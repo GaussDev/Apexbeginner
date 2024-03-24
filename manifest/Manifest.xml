@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AccountService</members>
+        <members>Car</members>
+        <members>Company</members>
+        <members>ContactService</members>
+        <members>Department</members>
+        <members>Employee</members>
+        <members>ForEach</members>
+        <members>IfElsePractice</members>
+        <members>Loops</members>
+        <members>MapsService</members>
+        <members>NewAccountService</members>
+        <members>NewOpportunityService</members>
+        <members>OpportunityQueries</members>
+        <members>OpportunityService</members>
+        <members>OpportunityServicev2</members>
+        <members>Person</members>
+        <members>Radio</members>
+        <members>Rectangle</members>
+        <members>Robot</members>
+        <members>SoqlPractice</members>
+        <members>StringListsPractice</members>
+        <members>newLoops</members>
+        <members>triggerPractice</members>
+        <name>ApexClass</name>
+    </types>
+    <version>60.0</version>
+</Package>
